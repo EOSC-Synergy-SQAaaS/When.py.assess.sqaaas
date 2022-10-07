@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/dirn/When.py git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-amaranth-clam.sh
-        container: qc.acc_paltry-olivine-cassowary
+        - /usr/bin/env sh .sqa/script.wheezy-carmine-capuchin.sh
+        container: qc.acc_snazzy-smalt-snail
   QC.Doc:
     repos:
       github.com/dirn/When.py find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-apricot-barracuda.sh
-        container: qc.doc_trippy-tan-molly
+        - /usr/bin/env sh .sqa/script.shabby-smalt-dragonfly.sh
+        container: qc.doc_muggy-magenta-chinook
       github.com/dirn/When.py git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-orange-tang.sh
-        container: qc.doc_silly-tangerine-husky
+        - /usr/bin/env sh .sqa/script.hasty-peach-javanese.sh
+        container: qc.doc_lousy-periwinkle-frigatebird
       github.com/dirn/When.py restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-cinnabar-rhinoceros.sh
-        container: qc.doc_smelly-tan-oyster
+        - /usr/bin/env sh .sqa/script.woozy-white-shrimp.sh
+        container: qc.doc_thirsty-dandelion-rottweiler
   QC.Lic:
     repos:
       github.com/dirn/When.py licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-orchid-peccary.sh
-        container: qc.lic_shaggy-ivory-coral
+        - /usr/bin/env sh .sqa/script.jumpy-salmon-rottweiler.sh
+        container: qc.lic_gamy-puce-paradise
   QC.Sec:
     repos:
       github.com/dirn/When.py bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-amethyst-orangutan.sh
-        container: qc.sec_craggy-red-chow
+        - /usr/bin/env sh .sqa/script.nippy-grey-dane.sh
+        container: qc.sec_sleazy-chartreuse-horse
   QC.Sty:
     repos:
       github.com/dirn/When.py flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-brass-magpie.sh
-        container: qc.sty_paltry-ivory-ibis
+        - /usr/bin/env sh .sqa/script.scanty-wheat-akita.sh
+        container: qc.sty_homey-charcoal-buzzard
   QC.Ver:
     repos:
       github.com/dirn/When.py get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-cobalt-greyhound.sh
-        container: qc.ver_crappy-heliotrope-kangaroo
+        - /usr/bin/env sh .sqa/script.tacky-crimson-audemer.sh
+        container: qc.ver_geeky-ecru-horse
 timeout: 1800
