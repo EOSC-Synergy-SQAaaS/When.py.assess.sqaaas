@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.2
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/dirn/When.py:
+      branch: develop
+      repo: https://github.com/dirn/When.py
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/dirn/When.py git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-amaranth-clam.sh
+        container: qc.acc_paltry-olivine-cassowary
+  QC.Doc:
+    repos:
+      github.com/dirn/When.py find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-apricot-barracuda.sh
+        container: qc.doc_trippy-tan-molly
+      github.com/dirn/When.py git:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-orange-tang.sh
+        container: qc.doc_silly-tangerine-husky
+      github.com/dirn/When.py restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-cinnabar-rhinoceros.sh
+        container: qc.doc_smelly-tan-oyster
+  QC.Lic:
+    repos:
+      github.com/dirn/When.py licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-orchid-peccary.sh
+        container: qc.lic_shaggy-ivory-coral
+  QC.Sec:
+    repos:
+      github.com/dirn/When.py bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-amethyst-orangutan.sh
+        container: qc.sec_craggy-red-chow
+  QC.Sty:
+    repos:
+      github.com/dirn/When.py flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-brass-magpie.sh
+        container: qc.sty_paltry-ivory-ibis
+  QC.Ver:
+    repos:
+      github.com/dirn/When.py get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-cobalt-greyhound.sh
+        container: qc.ver_crappy-heliotrope-kangaroo
+timeout: 1800
